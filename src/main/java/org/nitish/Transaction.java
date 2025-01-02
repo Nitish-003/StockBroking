@@ -1,4 +1,7 @@
 package org.nitish;
 
-public class Transaction {
+interface Transaction {
+    double calculateTransactionCost(double amount, double brokerageRate);
+    double calculateTax(double amount, double taxRate);
+    void executeTransaction(String stockName, int quantity);
 }
